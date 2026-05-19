@@ -1,0 +1,14 @@
+{
+  "name": "evofit",
+  "version": "1.0.0",
+  "description": "EVOFIT - Fitness RPG Engine",
+  "main": "dist/battleEngine.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-strip-types testBattle.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

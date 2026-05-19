@@ -1,0 +1,452 @@
+[
+  {
+    "id": "creature_001",
+    "name": "Pyroshell",
+    "type": "Flame",
+    "rarity": "Starter",
+    "stage": 1,
+    "stats": {
+      "hp": 120,
+      "attack": 25,
+      "defense": 18,
+      "speed": 15,
+      "criticalChance": 0.05
+    },
+    "fitnessMultipliers": {
+      "stepCountDaily": {
+        "statAffected": "attack",
+        "formula": "baseValue * (1 + (dailySteps / 10000) * 0.15)",
+        "description": "Increases Attack by 15% for every 10,000 steps taken today."
+      },
+      "activeMinutesDaily": {
+        "statAffected": "speed",
+        "formula": "baseValue * (1 + (activeMinutes / 30) * 0.10)",
+        "description": "Increases Speed by 10% for every 30 active minutes today."
+      }
+    },
+    "evolutionTree": {
+      "stage1": {
+        "name": "Pyroshell",
+        "requirements": null
+      },
+      "stage2": {
+        "name": "Pyroclast",
+        "requirements": {
+          "cumulativeSteps": 50000,
+          "completedWorkouts": 5
+        }
+      },
+      "stage3": {
+        "name": "Pyrosaur",
+        "requirements": {
+          "cumulativeSteps": 150000,
+          "completedWorkouts": 15
+        }
+      }
+    },
+    "moves": [
+      {
+        "id": "move_ember_slash",
+        "name": "Ember Slash",
+        "type": "Flame",
+        "power": 1.2,
+        "accuracy": 0.95,
+        "effect": null,
+        "description": "A burning claw strike."
+      },
+      {
+        "id": "move_flame_burst",
+        "name": "Flame Burst",
+        "type": "Flame",
+        "power": 1.6,
+        "accuracy": 0.85,
+        "effect": null,
+        "description": "Unleashes a sudden burst of fire."
+      },
+      {
+        "id": "move_melt_armor",
+        "name": "Melt Armour",
+        "type": "Flame",
+        "power": 0.8,
+        "accuracy": 1.0,
+        "effect": {
+          "type": "debuff",
+          "stat": "defense",
+          "value": -0.2,
+          "duration": 2,
+          "target": "opponent"
+        },
+        "description": "Melts target defense by 20% for 2 turns."
+      },
+      {
+        "id": "move_inferno_nova",
+        "name": "Inferno Nova",
+        "type": "Flame",
+        "power": 2.2,
+        "accuracy": 0.70,
+        "effect": null,
+        "description": "A massive flame blast with lower accuracy."
+      }
+    ]
+  },
+  {
+    "id": "creature_002",
+    "name": "Hydropup",
+    "type": "Hydro",
+    "rarity": "Starter",
+    "stage": 1,
+    "stats": {
+      "hp": 140,
+      "attack": 20,
+      "defense": 20,
+      "speed": 12,
+      "criticalChance": 0.05
+    },
+    "fitnessMultipliers": {
+      "waterOuncesDaily": {
+        "statAffected": "hp",
+        "formula": "baseValue * (1 + (waterOunces / 64) * 0.10)",
+        "description": "Increases HP by 10% for meeting a 64oz water goal."
+      },
+      "sleepHoursDaily": {
+        "statAffected": "defense",
+        "formula": "baseValue * (1 + (sleepHours / 8) * 0.12)",
+        "description": "Increases Defense by 12% for achieving 8 hours of sleep."
+      }
+    },
+    "evolutionTree": {
+      "stage1": {
+        "name": "Hydropup",
+        "requirements": null
+      },
+      "stage2": {
+        "name": "Hydrofang",
+        "requirements": {
+          "cumulativeWaterOunces": 448,
+          "completedWorkouts": 5
+        }
+      },
+      "stage3": {
+        "name": "Hydrovore",
+        "requirements": {
+          "cumulativeWaterOunces": 1344,
+          "completedWorkouts": 15
+        }
+      }
+    },
+    "moves": [
+      {
+        "id": "move_aqua_splash",
+        "name": "Aqua Splash",
+        "type": "Hydro",
+        "power": 1.1,
+        "accuracy": 0.95,
+        "effect": null,
+        "description": "Splashes water with high force."
+      },
+      {
+        "id": "move_bubble_shield",
+        "name": "Bubble Shield",
+        "type": "Hydro",
+        "power": 0.0,
+        "accuracy": 1.0,
+        "effect": {
+          "type": "buff",
+          "stat": "defense",
+          "value": 0.3,
+          "duration": 3,
+          "target": "self"
+        },
+        "description": "Surrounds user in bubbles, boosting Defense by 30% for 3 turns."
+      },
+      {
+        "id": "move_torrential_bite",
+        "name": "Torrential Bite",
+        "type": "Hydro",
+        "power": 1.5,
+        "accuracy": 0.90,
+        "effect": null,
+        "description": "Bites the target with water-infused fangs."
+      },
+      {
+        "id": "move_tsunami_crash",
+        "name": "Tsunami Crash",
+        "type": "Hydro",
+        "power": 2.0,
+        "accuracy": 0.75,
+        "effect": null,
+        "description": "Crashes a massive wave down onto the target."
+      }
+    ]
+  },
+  {
+    "id": "creature_003",
+    "name": "Terracliff",
+    "type": "Terra",
+    "rarity": "Starter",
+    "stage": 1,
+    "stats": {
+      "hp": 160,
+      "attack": 18,
+      "defense": 28,
+      "speed": 8,
+      "criticalChance": 0.03
+    },
+    "fitnessMultipliers": {
+      "completedWorkoutsDaily": {
+        "statAffected": "defense",
+        "formula": "baseValue * (1 + workoutsCompleted * 0.15)",
+        "description": "Increases Defense by 15% for each completed workout today."
+      },
+      "stepCountDaily": {
+        "statAffected": "hp",
+        "formula": "baseValue * (1 + (dailySteps / 8000) * 0.08)",
+        "description": "Increases max HP by 8% for every 8,000 steps today."
+      }
+    },
+    "evolutionTree": {
+      "stage1": {
+        "name": "Terracliff",
+        "requirements": null
+      },
+      "stage2": {
+        "name": "Terragolem",
+        "requirements": {
+          "completedWorkouts": 6,
+          "cumulativeSteps": 40000
+        }
+      },
+      "stage3": {
+        "name": "Terrabaston",
+        "requirements": {
+          "completedWorkouts": 18,
+          "cumulativeSteps": 120000
+        }
+      }
+    },
+    "moves": [
+      {
+        "id": "move_rock_throw",
+        "name": "Rock Throw",
+        "type": "Terra",
+        "power": 1.1,
+        "accuracy": 0.90,
+        "effect": null,
+        "description": "Hurls a heavy stone."
+      },
+      {
+        "id": "move_stone_aegis",
+        "name": "Stone Aegis",
+        "type": "Terra",
+        "power": 0.0,
+        "accuracy": 1.0,
+        "effect": {
+          "type": "buff",
+          "stat": "defense",
+          "value": 0.4,
+          "duration": 2,
+          "target": "self"
+        },
+        "description": "Hardens skin like granite, increasing Defense by 40% for 2 turns."
+      },
+      {
+        "id": "move_seismic_slam",
+        "name": "Seismic Slam",
+        "type": "Terra",
+        "power": 1.4,
+        "accuracy": 0.85,
+        "effect": null,
+        "description": "Slams into the opponent using bulk weight."
+      },
+      {
+        "id": "move_earthquake",
+        "name": "Earthquake",
+        "type": "Terra",
+        "power": 1.9,
+        "accuracy": 0.80,
+        "effect": null,
+        "description": "Triggers a violent ground tremor."
+      }
+    ]
+  },
+  {
+    "id": "creature_004",
+    "name": "Aerowing",
+    "type": "Aero",
+    "rarity": "Starter",
+    "stage": 1,
+    "stats": {
+      "hp": 105,
+      "attack": 22,
+      "defense": 15,
+      "speed": 22,
+      "criticalChance": 0.08
+    },
+    "fitnessMultipliers": {
+      "activeMinutesDaily": {
+        "statAffected": "speed",
+        "formula": "baseValue * (1 + (activeMinutes / 20) * 0.12)",
+        "description": "Increases Speed by 12% for every 20 active minutes today."
+      },
+      "caloriesBurnedDaily": {
+        "statAffected": "criticalChance",
+        "formula": "baseValue + (caloriesBurned / 500) * 0.05",
+        "description": "Increases Critical Chance by +5% for every 500 kcal burned today."
+      }
+    },
+    "evolutionTree": {
+      "stage1": {
+        "name": "Aerowing",
+        "requirements": null
+      },
+      "stage2": {
+        "name": "Aerosaur",
+        "requirements": {
+          "activeMinutes": 150,
+          "completedWorkouts": 4
+        }
+      },
+      "stage3": {
+        "name": "Aeroglide",
+        "requirements": {
+          "activeMinutes": 450,
+          "completedWorkouts": 12
+        }
+      }
+    },
+    "moves": [
+      {
+        "id": "move_gust_wind",
+        "name": "Gust Wind",
+        "type": "Aero",
+        "power": 1.0,
+        "accuracy": 0.98,
+        "effect": null,
+        "description": "Blasts target with high-speed air currents."
+      },
+      {
+        "id": "move_swift_strike",
+        "name": "Swift Strike",
+        "type": "Aero",
+        "power": 1.3,
+        "accuracy": 0.95,
+        "effect": null,
+        "description": "An extremely fast swoop attack."
+      },
+      {
+        "id": "move_feather_dance",
+        "name": "Feather Dance",
+        "type": "Aero",
+        "power": 0.0,
+        "accuracy": 0.95,
+        "effect": {
+          "type": "debuff",
+          "stat": "attack",
+          "value": -0.25,
+          "duration": 2,
+          "target": "opponent"
+        },
+        "description": "Covers target in feathers, lowering their Attack by 25% for 2 turns."
+      },
+      {
+        "id": "move_hurricane",
+        "name": "Hurricane",
+        "type": "Aero",
+        "power": 2.1,
+        "accuracy": 0.70,
+        "effect": null,
+        "description": "A devastating wind vortex with high power but lower accuracy."
+      }
+    ]
+  },
+  {
+    "id": "creature_005",
+    "name": "Sparkmouse",
+    "type": "Spark",
+    "rarity": "Starter",
+    "stage": 1,
+    "stats": {
+      "hp": 100,
+      "attack": 24,
+      "defense": 14,
+      "speed": 25,
+      "criticalChance": 0.10
+    },
+    "fitnessMultipliers": {
+      "sleepHoursDaily": {
+        "statAffected": "speed",
+        "formula": "baseValue * (1 + (sleepHours >= 7 ? 0.20 : 0))",
+        "description": "Gets +20% Speed boost if sleep duration was 7+ hours."
+      },
+      "stepCountDaily": {
+        "statAffected": "attack",
+        "formula": "baseValue * (1 + (dailySteps / 12000) * 0.20)",
+        "description": "Increases Attack by 20% for every 12,000 steps today."
+      }
+    },
+    "evolutionTree": {
+      "stage1": {
+        "name": "Sparkmouse",
+        "requirements": null
+      },
+      "stage2": {
+        "name": "Sparkvolt",
+        "requirements": {
+          "sleepGoalMetDays": 5,
+          "completedWorkouts": 5
+        }
+      },
+      "stage3": {
+        "name": "Sparkstorm",
+        "requirements": {
+          "sleepGoalMetDays": 15,
+          "completedWorkouts": 15
+        }
+      }
+    },
+    "moves": [
+      {
+        "id": "move_static_shock",
+        "name": "Static Shock",
+        "type": "Spark",
+        "power": 1.1,
+        "accuracy": 0.95,
+        "effect": null,
+        "description": "Discharges stored static electricity."
+      },
+      {
+        "id": "move_spark_dash",
+        "name": "Spark Dash",
+        "type": "Spark",
+        "power": 1.4,
+        "accuracy": 0.90,
+        "effect": null,
+        "description": "Charges at speed with lightning cloaking."
+      },
+      {
+        "id": "move_thunder_charge",
+        "name": "Thunder Charge",
+        "type": "Spark",
+        "power": 0.0,
+        "accuracy": 1.0,
+        "effect": {
+          "type": "buff",
+          "stat": "attack",
+          "value": 0.35,
+          "duration": 3,
+          "target": "self"
+        },
+        "description": "Charges energy, boosting Attack by 35% for 3 turns."
+      },
+      {
+        "id": "move_volt_storm",
+        "name": "Volt Storm",
+        "type": "Spark",
+        "power": 2.0,
+        "accuracy": 0.75,
+        "effect": null,
+        "description": "Strikes with multiple high-voltage lightning arcs."
+      }
+    ]
+  }
+]
