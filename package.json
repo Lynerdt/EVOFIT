@@ -9,6 +9,7 @@
     "test": "node --experimental-strip-types testBattle.ts"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
   }
 }
